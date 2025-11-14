@@ -1,0 +1,1600 @@
+[
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22912",
+    "stoppedEarly": false,
+    "totalRequests": 12,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22912",
+        "status": 200,
+        "sizeBytes": 6787,
+        "timestamp": "2025-11-14T10:02:49.617Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.062Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912&id=22912&code=xzuzdiapqywwwhl&ord=96580934978247b5fb6f2725a50cdef4&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.312Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.555Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22912",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:02:50.556Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": 4104,
+        "timestamp": "2025-11-14T10:02:51.102Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": 34352,
+        "timestamp": "2025-11-14T10:02:51.105Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": 6426,
+        "timestamp": "2025-11-14T10:02:52.839Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": 1900,
+        "timestamp": "2025-11-14T10:02:52.839Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": 102700,
+        "timestamp": "2025-11-14T10:02:52.845Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:52.884Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=6abbe63bc6b5e75e235e3178ba2a6067&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22912",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:55.196Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22913",
+    "stoppedEarly": false,
+    "totalRequests": 11,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22913",
+        "status": 200,
+        "sizeBytes": 6783,
+        "timestamp": "2025-11-14T10:02:49.618Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:49.902Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913&id=22913&code=jhvfwmcftarjuua&ord=4c26e51f9e1c34e8c49d4b52442ec991&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.142Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22913",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:02:50.388Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=fb310e28c8327f50b4c75cb0b3cf214d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.391Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=fb310e28c8327f50b4c75cb0b3cf214d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913",
+        "status": 200,
+        "sizeBytes": 4104,
+        "timestamp": "2025-11-14T10:02:51.419Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=fb310e28c8327f50b4c75cb0b3cf214d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913",
+        "status": 200,
+        "sizeBytes": 20880,
+        "timestamp": "2025-11-14T10:02:51.422Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=fb310e28c8327f50b4c75cb0b3cf214d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913",
+        "status": 200,
+        "sizeBytes": 1464,
+        "timestamp": "2025-11-14T10:02:52.769Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=fb310e28c8327f50b4c75cb0b3cf214d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913",
+        "status": 200,
+        "sizeBytes": 3672,
+        "timestamp": "2025-11-14T10:02:52.769Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=fb310e28c8327f50b4c75cb0b3cf214d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913",
+        "status": 200,
+        "sizeBytes": 62572,
+        "timestamp": "2025-11-14T10:02:52.781Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=fb310e28c8327f50b4c75cb0b3cf214d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22913",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:52.783Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22910",
+    "stoppedEarly": false,
+    "totalRequests": 12,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22910",
+        "status": 200,
+        "sizeBytes": 6799,
+        "timestamp": "2025-11-14T10:02:49.619Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.109Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910&id=22910&code=owkupldxwlafbkd&ord=40798eac90ad6956c91b69e8c87a0f20&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.338Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22910",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:02:50.554Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.558Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": 924,
+        "timestamp": "2025-11-14T10:02:51.102Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": 15962,
+        "timestamp": "2025-11-14T10:02:51.110Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:52.902Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": 28538,
+        "timestamp": "2025-11-14T10:02:52.903Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": 990,
+        "timestamp": "2025-11-14T10:02:52.903Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": 2266,
+        "timestamp": "2025-11-14T10:02:52.904Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=293ff0ae272f42ac3aa27bbf2be0f6b9&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22910",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:55.201Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22911",
+    "stoppedEarly": false,
+    "totalRequests": 12,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22911",
+        "status": 200,
+        "sizeBytes": 6805,
+        "timestamp": "2025-11-14T10:02:49.971Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.459Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911&id=22911&code=celamcfpkefflzu&ord=c8c73032e37931a6ba5619c88e31b35d&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.701Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22911",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:02:50.972Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.973Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": 890,
+        "timestamp": "2025-11-14T10:02:51.717Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": 14660,
+        "timestamp": "2025-11-14T10:02:51.718Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": 938,
+        "timestamp": "2025-11-14T10:02:52.764Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": 2674,
+        "timestamp": "2025-11-14T10:02:52.764Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": 26678,
+        "timestamp": "2025-11-14T10:02:52.764Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:52.765Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=f619e68beefe3befe11d4f3b998f7cfd&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22911",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:56.145Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22914",
+    "stoppedEarly": false,
+    "totalRequests": 12,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22914",
+        "status": 200,
+        "sizeBytes": 6804,
+        "timestamp": "2025-11-14T10:02:49.930Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.399Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914&id=22914&code=binbdcnnymbghvh&ord=3fb92f10cde829974856fca923d2be1d&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.694Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22914",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:02:50.897Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:50.970Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": 15594,
+        "timestamp": "2025-11-14T10:02:51.716Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": 670,
+        "timestamp": "2025-11-14T10:02:51.718Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": 2266,
+        "timestamp": "2025-11-14T10:02:52.719Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": 848,
+        "timestamp": "2025-11-14T10:02:52.722Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": 20380,
+        "timestamp": "2025-11-14T10:02:52.722Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:52.723Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=32256438490eecb498502079ec192183&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22914",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:02:56.268Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22916",
+    "stoppedEarly": false,
+    "totalRequests": 14,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22916",
+        "status": 200,
+        "sizeBytes": 6791,
+        "timestamp": "2025-11-14T10:03:04.402Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:04.891Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916&id=22916&code=ivqcvxbswngxquv&ord=f804954aefc5ac8e65f4407a5775e4dd&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.152Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22916",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:05.392Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.408Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": 1378,
+        "timestamp": "2025-11-14T10:03:05.966Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": 2364,
+        "timestamp": "2025-11-14T10:03:07.255Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": 2254,
+        "timestamp": "2025-11-14T10:03:07.255Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": 1166,
+        "timestamp": "2025-11-14T10:03:07.255Z"
+      },
+      {
+        "filename": "bg2.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/bg2.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": 1894,
+        "timestamp": "2025-11-14T10:03:07.256Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": 39730,
+        "timestamp": "2025-11-14T10:03:07.256Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": 15506,
+        "timestamp": "2025-11-14T10:03:07.259Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:07.259Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=b28a31a54dbc85dfb03bfaaa131dd1ee&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22916",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:10.622Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22915",
+    "stoppedEarly": false,
+    "totalRequests": 14,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22915",
+        "status": 200,
+        "sizeBytes": 6791,
+        "timestamp": "2025-11-14T10:03:04.833Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.109Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915&id=22915&code=sajekrsqhspftbf&ord=a9839c9683bf535d34eac3193f1cad53&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.367Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.580Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22915",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:05.588Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": 1378,
+        "timestamp": "2025-11-14T10:03:06.116Z"
+      },
+      {
+        "filename": "bg2.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/bg2.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": 1894,
+        "timestamp": "2025-11-14T10:03:07.186Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": 39730,
+        "timestamp": "2025-11-14T10:03:07.186Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": 1166,
+        "timestamp": "2025-11-14T10:03:07.234Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": 2364,
+        "timestamp": "2025-11-14T10:03:07.234Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": 2254,
+        "timestamp": "2025-11-14T10:03:07.234Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": 15506,
+        "timestamp": "2025-11-14T10:03:07.711Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:07.724Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5d74c5a55e8c5c0eff3215a9abb5c882&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22915",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:10.597Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22904",
+    "stoppedEarly": false,
+    "totalRequests": 14,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22904",
+        "status": 200,
+        "sizeBytes": 6804,
+        "timestamp": "2025-11-14T10:03:04.434Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:04.933Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904&id=22904&code=ktzzvwqotettxqq&ord=f6f0aa4a72012c935e45002bf2ee1986&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.166Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22904",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:05.392Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.426Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": 4596,
+        "timestamp": "2025-11-14T10:03:05.965Z"
+      },
+      {
+        "filename": "bg2.webp",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/bg2.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": 2074,
+        "timestamp": "2025-11-14T10:03:07.434Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": 3854,
+        "timestamp": "2025-11-14T10:03:07.459Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": 1030,
+        "timestamp": "2025-11-14T10:03:07.475Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": 41176,
+        "timestamp": "2025-11-14T10:03:07.488Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": 2564,
+        "timestamp": "2025-11-14T10:03:07.499Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:07.504Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": 13248,
+        "timestamp": "2025-11-14T10:03:07.504Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=0ce72db79cbc6143f5fa55fac7074492&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22904",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:10.626Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22906",
+    "stoppedEarly": false,
+    "totalRequests": 13,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22906",
+        "status": 200,
+        "sizeBytes": 6787,
+        "timestamp": "2025-11-14T10:03:04.877Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.433Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906&id=22906&code=vvhfihszaamajxf&ord=f77844de5311d11417e5a4c1d8e96daf&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.737Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22906",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:05.983Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.997Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": 3028,
+        "timestamp": "2025-11-14T10:03:06.603Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": 3214,
+        "timestamp": "2025-11-14T10:03:07.760Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": 460,
+        "timestamp": "2025-11-14T10:03:07.761Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": 2370,
+        "timestamp": "2025-11-14T10:03:07.761Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": 28008,
+        "timestamp": "2025-11-14T10:03:07.766Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": 10120,
+        "timestamp": "2025-11-14T10:03:07.819Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:07.831Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=bb402707ecf7452c49201defa071eaad&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22906",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:11.098Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22905",
+    "stoppedEarly": false,
+    "totalRequests": 13,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22905",
+        "status": 200,
+        "sizeBytes": 6779,
+        "timestamp": "2025-11-14T10:03:04.406Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:04.830Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905&id=22905&code=nkfxytmqlmeisxn&ord=444c463cc49b8fab4f89cfdcde0d8c11&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.079Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22905",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:05.263Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:05.327Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": 3028,
+        "timestamp": "2025-11-14T10:03:05.847Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": 2184,
+        "timestamp": "2025-11-14T10:03:07.011Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": 26404,
+        "timestamp": "2025-11-14T10:03:07.021Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": 768,
+        "timestamp": "2025-11-14T10:03:07.022Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": 4756,
+        "timestamp": "2025-11-14T10:03:07.022Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": 9978,
+        "timestamp": "2025-11-14T10:03:07.025Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:07.025Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=c5be20c4d6fa55aa8440c2ef751e012e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22905",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:10.174Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22907",
+    "stoppedEarly": false,
+    "totalRequests": 13,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22907",
+        "status": 200,
+        "sizeBytes": 6798,
+        "timestamp": "2025-11-14T10:03:19.749Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.131Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907&id=22907&code=boqlasdqyyhrivt&ord=077d84fe966bc9d6237e4c59432bbaff&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.454Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22907",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:20.720Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.724Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": 2112,
+        "timestamp": "2025-11-14T10:03:21.272Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": 614,
+        "timestamp": "2025-11-14T10:03:22.451Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": 3146,
+        "timestamp": "2025-11-14T10:03:22.454Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": 1556,
+        "timestamp": "2025-11-14T10:03:22.456Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": 30874,
+        "timestamp": "2025-11-14T10:03:22.457Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:22.462Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": 8314,
+        "timestamp": "2025-11-14T10:03:22.466Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=e41674708207df69e389be78c272972b&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22907",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:25.743Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22908",
+    "stoppedEarly": false,
+    "totalRequests": 13,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22908",
+        "status": 200,
+        "sizeBytes": 6796,
+        "timestamp": "2025-11-14T10:03:19.713Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:19.968Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908&id=22908&code=exhrlutssbblwgc&ord=870cb8759d1d5401b5cd94b46774bac7&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.234Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22908",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:20.478Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.511Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": 2142,
+        "timestamp": "2025-11-14T10:03:21.034Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": 1900,
+        "timestamp": "2025-11-14T10:03:22.266Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": 774,
+        "timestamp": "2025-11-14T10:03:22.266Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": 2826,
+        "timestamp": "2025-11-14T10:03:22.267Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": 28822,
+        "timestamp": "2025-11-14T10:03:22.271Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": 9174,
+        "timestamp": "2025-11-14T10:03:22.272Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:22.276Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=6da65143b0c41e22116a80fce690f01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22908",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:25.473Z"
+      }
+    ]
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/test/22909",
+    "stoppedEarly": false,
+    "totalRequests": 13,
+    "duplicates": [],
+    "allRequests": [
+      {
+        "filename": "ads_banner.php",
+        "url": "https://lab3.adserve.zone/ads_banner.php",
+        "type": "script",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22909",
+        "status": 200,
+        "sizeBytes": 6786,
+        "timestamp": "2025-11-14T10:03:19.749Z"
+      },
+      {
+        "filename": "ads_banner_html",
+        "url": "https://lab3.adserve.zone/go/ads_banner_html",
+        "type": "document",
+        "frame": "(main)",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.211Z"
+      },
+      {
+        "filename": "index.html",
+        "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html",
+        "type": "document",
+        "frame": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909&id=22909&code=oxhitrkzfjelxtx&ord=9dc8ee6dbe0ae764b1489d828cba5418&debug=0&domain=adserve.zone",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.489Z"
+      },
+      {
+        "filename": "sf",
+        "url": "https://lab3.adserve.zone/go/sf",
+        "type": "xhr",
+        "frame": "https://dashboard.adserve.zone/preview/1403/test/22909",
+        "status": 200,
+        "sizeBytes": 0,
+        "timestamp": "2025-11-14T10:03:20.721Z"
+      },
+      {
+        "filename": "adserve_enabler.js",
+        "url": "https://lab3.adserve.zone/js/adserve_enabler.js",
+        "type": "script",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:20.788Z"
+      },
+      {
+        "filename": "CTA.webp",
+        "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/images/CTA.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": 2142,
+        "timestamp": "2025-11-14T10:03:21.351Z"
+      },
+      {
+        "filename": "bg.webp",
+        "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/bg.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": 1728,
+        "timestamp": "2025-11-14T10:03:22.230Z"
+      },
+      {
+        "filename": "chars.webp",
+        "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/chars.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": 3830,
+        "timestamp": "2025-11-14T10:03:22.239Z"
+      },
+      {
+        "filename": "TT.webp",
+        "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/TT.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": 28822,
+        "timestamp": "2025-11-14T10:03:22.239Z"
+      },
+      {
+        "filename": "tagline.webp",
+        "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/tagline.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": 774,
+        "timestamp": "2025-11-14T10:03:22.240Z"
+      },
+      {
+        "filename": "posterimage.webp",
+        "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/posterimage.webp",
+        "type": "image",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": 11108,
+        "timestamp": "2025-11-14T10:03:22.347Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:22.389Z"
+      },
+      {
+        "filename": "track-video",
+        "url": "https://lab3.adserve.zone/api/track-video",
+        "type": "xhr",
+        "frame": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=5612fc9066624410a2b1c36a5b431dba&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Ftest%2F22909",
+        "status": 200,
+        "sizeBytes": null,
+        "timestamp": "2025-11-14T10:03:25.836Z"
+      }
+    ]
+  }
+]

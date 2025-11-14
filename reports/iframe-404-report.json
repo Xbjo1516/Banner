@@ -1,0 +1,133 @@
+[
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/test-404",
+    "issues": {
+      "iframe404s": [
+        {
+          "iframeUrl": "",
+          "parentUrl": "https://dashboard.adserve.zone/test-404/",
+          "status": 404,
+          "timestamp": "2025-11-14T09:56:30.392Z"
+        },
+        {
+          "iframeUrl": "",
+          "parentUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
+          "status": 404,
+          "timestamp": "2025-11-14T09:56:55.783Z"
+        }
+      ],
+      "assetFailures": [
+        {
+          "type": "image",
+          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=4429b3785a8cdee9a9c11640f3dce2d5&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F",
+          "status": 404,
+          "timestamp": "2025-11-14T09:56:31.591Z"
+        },
+        {
+          "type": "image",
+          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
+          "status": 404,
+          "timestamp": "2025-11-14T09:57:07.760Z"
+        }
+      ],
+      "allIframes": [
+        {
+          "url": "https://lab3.adserve.zone/banners/vvphutuzqwoqrmb/vdeokzubxnmbvbw/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=97de35bed778733747c42234eb3db605&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F",
+          "name": "awxBn-vvphutuzqwoqrmb-R4uzO-ifr",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F&id=22901&code=cjwpacxbvlazshv__&ord=d6774bc80fca1a89be8cbdd034f7c5ae&debug=1&adzparam=landingpage::,utm_source::,utm_medium::,utm_campaign::&domain=adserve.zone&r=",
+          "name": "awxBn-kmhwwbvuziqwrab-pE15g-ifr",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=4429b3785a8cdee9a9c11640f3dce2d5&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F",
+          "name": "awxBn-omwezjusjepgpmr-0FawX-ifr",
+          "hasError": false
+        }
+      ],
+      "pageStatus": null
+    }
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/test-404/normal.html",
+    "issues": {
+      "iframe404s": [
+        {
+          "iframeUrl": "",
+          "parentUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
+          "status": 404,
+          "timestamp": "2025-11-14T09:56:55.784Z"
+        }
+      ],
+      "assetFailures": [
+        {
+          "type": "image",
+          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
+          "status": 404,
+          "timestamp": "2025-11-14T09:57:07.761Z"
+        }
+      ],
+      "allIframes": [
+        {
+          "url": "https://lab3.adserve.zone/banners/vvphutuzqwoqrmb/vdeokzubxnmbvbw/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=4e2c682ccdea982be39ea956006d38ab&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2Fnormal.html",
+          "name": "awxBn-vvphutuzqwoqrmb-h5A0E-ifr",
+          "hasError": false
+        }
+      ],
+      "pageStatus": null
+    }
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
+    "issues": {
+      "iframe404s": [
+        {
+          "iframeUrl": "",
+          "parentUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
+          "status": 404,
+          "timestamp": "2025-11-14T09:56:55.784Z"
+        }
+      ],
+      "assetFailures": [
+        {
+          "type": "image",
+          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
+          "status": 404,
+          "timestamp": "2025-11-14T09:57:07.761Z"
+        }
+      ],
+      "allIframes": [
+        {
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-index.html&id=22901&code=cjwpacxbvlazshv__&ord=11ee448b04b736d9508e688f7bb5ae15&debug=1&adzparam=landingpage::,utm_source::,utm_medium::,utm_campaign::&domain=adserve.zone&r=",
+          "name": "awxBn-kmhwwbvuziqwrab-ZTn2Q-ifr",
+          "hasError": false
+        }
+      ],
+      "pageStatus": null
+    }
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/test-404/404-some-asset.html",
+    "issues": {
+      "iframe404s": [],
+      "assetFailures": [
+        {
+          "type": "image",
+          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
+          "status": 404,
+          "timestamp": "2025-11-14T09:57:07.762Z"
+        }
+      ],
+      "allIframes": [
+        {
+          "url": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
+          "name": "awxBn-omwezjusjepgpmr-rGunB-ifr",
+          "hasError": false
+        }
+      ],
+      "pageStatus": null
+    }
+  }
+]
