@@ -2,157 +2,128 @@ const { chromium } = require("playwright");
 const fs = require("fs");
 const path = require("path");
 
-const CONCURRENCY = 5;
-const WAIT_TIME = 10000;
-const MAX_REQUESTS = 20;
+const LOGIN_EMAIL = "access@adserve.no";
+const WAIT_TIME = 5000;
+const ALLOWED_DOMAINS = ["lab3.adserve.zone"];
+const MAX_REQUESTS_PER_FRAME = 20;
 
-async function analyzeBanner(browser, url, allowedDomains) {
+async function loginIfNeeded(page) {
+    await page.waitForTimeout(500);
+    const modal = page.locator("#access-modal");
+    if (await modal.count() && await modal.isVisible().catch(() => false)) {
+        console.log("🔐 Login modal detected → logging in...");
+        await modal.locator('input[type="email"], input[placeholder*="mail" i]').first().fill(LOGIN_EMAIL);
+        await modal.locator('button').first().click();
+        await page.waitForTimeout(1000);
+        console.log("✅ Login success (modal)");
+        return;
+    }
+
+    const pageEmail = page.locator('input[type="email"]');
+    if (await pageEmail.isVisible().catch(() => false)) {
+        console.log("🔐 Login page detected → logging in...");
+        await pageEmail.fill(LOGIN_EMAIL);
+        await page.getByRole("button", { name: "Access" }).click();
+        await page.waitForTimeout(1000);
+        console.log("✅ Login success (full page)");
+        return;
+    }
+
+    console.log("ℹ️ No login required");
+}
+
+async function analyzeBanner(browser, url) {
     const page = await browser.newPage();
-
-    const assets = {};
-    const nameMap = {};
-    const duplicates = [];
-    const assetRecords = [];
-
     console.log(`\n🚀 Testing banner: ${url}`);
 
-    let requestCount = 0;
-    let stoppedEarly = false;
+    try { await page.goto(url, { waitUntil: "domcontentloaded" }); }
+    catch (err) { console.log(`⚠️ initial page.goto failed → ${err.message}`); }
 
-    page.on("response", async (response) => {
-        if (stoppedEarly) return;
+    await loginIfNeeded(page);
 
+    try { await page.goto(url, { waitUntil: "domcontentloaded" }); }
+    catch (err) { console.log(`⚠️ page.goto after login failed → ${err.message}`); }
+
+    const frameMap = new Map();
+
+    page.on("response", async (res) => {
         try {
-            const req = response.request();
-            const resourceUrl = req.url().split("?")[0];
-            const hostname = new URL(resourceUrl).hostname;
+            const req = res.request();
+            const frame = req.frame();
+            if (!frame || frame === page.mainFrame()) return;
 
-            if (!allowedDomains.some(d => hostname.includes(d))) return;
+            const urlObj = new URL(req.url());
+            if (!ALLOWED_DOMAINS.some(d => urlObj.hostname.includes(d))) return;
 
-            requestCount++;
-            if (requestCount > MAX_REQUESTS) {
-                stoppedEarly = true;   
-                return;
-            }
+            const filename = path.basename(urlObj.pathname);
+            // ข้าม track-video
+            if (/^track-video/i.test(filename)) return;
 
-            const resourceType = req.resourceType();
-            const frame = response.frame();
-            const frameUrl = frame?.url() || "(main)";
-            const filename = path.basename(resourceUrl);
+            if (!frameMap.has(frame)) frameMap.set(frame, []);
+            const assets = frameMap.get(frame);
 
-            const headers = response.headers();
-            const contentLength = headers["content-length"]
-                ? parseInt(headers["content-length"], 10)
-                : null;
+            // จำกัด Requests ต่อ Frame
+            if (assets.length >= MAX_REQUESTS_PER_FRAME) return;
 
-            assets[filename] = (assets[filename] || 0) + 1;
-
-            if (!nameMap[filename]) nameMap[filename] = [];
-            if (!nameMap[filename].includes(resourceUrl)) {
-                nameMap[filename].push(resourceUrl);
-            }
-
-            assetRecords.push({
+            const size = res.headers()["content-length"] ? parseInt(res.headers()["content-length"], 10) : null;
+            assets.push({
                 filename,
-                url: resourceUrl,
-                type: resourceType,
-                frame: frameUrl,
-                status: response.status(),
-                sizeBytes: contentLength,
-                timestamp: new Date().toISOString(),
+                url: req.url(),
+                type: req.resourceType(),
+                sizeBytes: size,
+                status: res.status()
             });
-
-            if (assets[filename] === 2) {
-                if (!/^track-video/i.test(filename)) {
-                    console.log(`⚠️ Duplicate detected: ${filename}`);
-                    duplicates.push(filename);
-                }
-            }
-
-        } catch (err) {
-            console.log("⚠️ Error reading response:", err.message);
-        }
+        } catch { }
     });
 
-    try {
-        await page.goto(url, { timeout: 20000 });
-
-        if (!stoppedEarly) {
-            await page.waitForTimeout(WAIT_TIME);
-        }
-
-    } catch (err) {
-        console.log(`❌ Error loading banner: ${url}`);
-    }
-
+    await page.waitForTimeout(WAIT_TIME);
     await page.close();
 
-    console.log(`📦 Total assets analyzed: ${assetRecords.length}`);
-    if (duplicates.length === 0) {
-        console.log(`✅ No duplicates found for: ${url}`);
-    } else {
-        console.log(`❌ Found ${duplicates.length} duplicated filenames in: ${url}`);
+    const frameReports = [];
+    for (const [frame, assets] of frameMap.entries()) {
+        const filenameCount = {};
+        for (const a of assets) filenameCount[a.filename] = (filenameCount[a.filename] || 0) + 1;
+        const duplicates = Object.entries(filenameCount).filter(([_, c]) => c > 1).map(([n]) => n);
+
+        frameReports.push({
+            frameUrl: frame.url(),
+            totalRequests: assets.length,
+            duplicates,
+            assets
+        });
     }
 
-    return {
-        bannerUrl: url,
-        stoppedEarly,
-        totalRequests: assetRecords.length,
-        duplicates: duplicates.map(name => ({
-            filename: name,
-            count: assets[name],
-            urls: nameMap[name]
-        })),
-        allRequests: assetRecords
-    };
+    // แสดงผล
+    frameReports.forEach((f, idx) => {
+        console.log(`\n🖼️  Frame ${idx + 1}: ${f.frameUrl}`);
+        console.log(`   Total Requests: ${f.totalRequests}`);
+        if (f.duplicates.length > 0) console.log(`   ⚠️ Duplicates: ${f.duplicates.join(", ")}`);
+        else console.log("   ✅ No duplicates");
+    });
+
+    return { bannerUrl: url, frames: frameReports };
 }
 
 async function run() {
     const browser = await chromium.launch({ headless: true });
-
     const bannerUrls = [
-        // Nürnberg
-        // "https://dashboard.adserve.zone/preview/1402/test/22903",
-
-        // Five Nights at Freddys 2
-        "https://dashboard.adserve.zone/preview/1403/test/22912", //2000x600=200kb <- ADD WRAPPER
-        "https://dashboard.adserve.zone/preview/1403/test/22913", //2000x300=150kb <- ADD WRAPPER
-        "https://dashboard.adserve.zone/preview/1403/test/22910", //980x300=100kb
-        "https://dashboard.adserve.zone/preview/1403/test/22911", //970x365=100kb
-        "https://dashboard.adserve.zone/preview/1403/test/22914", //970x250=100kb
-        "https://dashboard.adserve.zone/preview/1403/test/22916", //640x400=100kb <- MAKE RESPONSIVE (แบบเต็มหน้าจอ)
-        "https://dashboard.adserve.zone/preview/1403/test/22915", //(แบบปกติ)
-        "https://dashboard.adserve.zone/preview/1403/test/22904", //580x400=100kb
-        "https://dashboard.adserve.zone/preview/1403/test/22906", //320x400=100kb - STATE 2 only preview (click on banner = go to landingpage)
-        "https://dashboard.adserve.zone/preview/1403/test/22905", //300x600=100kb - STATE 2 only preview (click on banner = go to landingpage)
-        "https://dashboard.adserve.zone/preview/1403/test/22907", //300x250=100kb
-        "https://dashboard.adserve.zone/preview/1403/test/22908", //180x500=100kb - STATE 2 only preview (click on banner = go to landingpage)
-        "https://dashboard.adserve.zone/preview/1403/test/22909", //160x600=100kb - STATE 2 only preview (click on banner = go to landingpage)
+        "https://dashboard.adserve.zone/preview/1403/s/pmuyjvytv1",
+        "https://dashboard.adserve.zone/preview/1402/s/tsuzensnj6",
     ];
-
-    const allowedDomains = [
-        "lab3.adserve.zone",
-    ];
-
-    const allReports = [];
-
-    for (let i = 0; i < bannerUrls.length; i += CONCURRENCY) {
-        const chunk = bannerUrls.slice(i, i + CONCURRENCY);
-
-        const results = await Promise.all(
-            chunk.map(url => analyzeBanner(browser, url, allowedDomains))
-        );
-
-        allReports.push(...results);
-    }
 
     const reportDir = path.join(__dirname, "reports");
     if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
 
-    const reportPath = path.join(reportDir, "duplicate-assets-report-Five-Nights.json"); // { Nürnberg , Five-Nights at Freddys 2 }
-    fs.writeFileSync(reportPath, JSON.stringify(allReports, null, 2));
+    for (const url of bannerUrls) {
+        const report = await analyzeBanner(browser, url);
 
-    console.log("\n💾 Report saved to:", reportPath);
+        const urlParts = url.split("/").filter(Boolean);
+        const bannerId = urlParts[urlParts.length - 1];
+
+        const reportPath = path.join(reportDir, `duplicate-assets-report-${bannerId}.json`);
+        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+        console.log(`\n💾 Report for ${url} saved to: ${reportPath}`);
+    }
+
     await browser.close();
-}
-run();
+}run();

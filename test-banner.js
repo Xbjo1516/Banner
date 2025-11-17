@@ -6,123 +6,151 @@ const path = require("path");
     const browser = await chromium.launch({ headless: false });
     const page = await browser.newPage();
 
+    const login = { email: 'access@adserve.no' };
     const bannerUrls = [
-        "https://dashboard.adserve.zone/test-404",
-        "https://dashboard.adserve.zone/test-404/normal.html", //ไม่ติด
-        "https://dashboard.adserve.zone/test-404/404-index.html", //ติด 404 หน้าเพจไม่มีอะไรแสดงได้เลย
-        "https://dashboard.adserve.zone/test-404/404-some-asset.html", //ติดบางอย่างในเฟรม
+        // "https://dashboard.adserve.zone/test-404",
+        // "https://dashboard.adserve.zone/test-404/normal.html", //ไม่ติด
+        // "https://dashboard.adserve.zone/test-404/404-index.html", //ติด 404 หน้าเพจไม่มีอะไรแสดงได้เลย
+        // "https://dashboard.adserve.zone/test-404/404-some-asset.html", //ติดบางอย่างในเฟรม
+        "https://dashboard.adserve.zone/preview/1403/s/pmuyjvytv1",
+        "https://dashboard.adserve.zone/preview/1402/s/tsuzensnj6",
     ];
 
     const allReports = [];
+
+    async function loginIfNeeded() {
+        await page.waitForTimeout(500);
+
+        const modal = page.locator('#access-modal');
+        const exists = await modal.count();
+        const visible = await modal.isVisible().catch(() => false);
+
+        if (exists && visible) {
+            console.log("🔐 Login modal detected → logging in...");
+            const emailInput = modal.locator('input[type="email"], input[placeholder*="mail" i]').first();
+            const submitBtn = modal.locator('button').first();
+            await emailInput.waitFor({ state: 'visible' });
+            await emailInput.fill(login.email);
+            await submitBtn.click();
+            await page.waitForTimeout(1000);
+            console.log("✅ Login success (modal)");
+            return;
+        }
+
+        const pageEmail = page.locator('input[type="email"]');
+        if (await pageEmail.isVisible().catch(() => false)) {
+            console.log("🔐 Login page detected → logging in...");
+            await pageEmail.fill(login.email);
+            await page.getByRole('button', { name: 'Access' }).click();
+            await page.waitForTimeout(1000);
+            console.log("✅ Login success (full page)");
+            return;
+        }
+
+        console.log("ℹ️  No login required");
+    }
 
     for (const url of bannerUrls) {
         console.log(`\n🚀 Testing banner: ${url}`);
 
         const issues = {
+            pageStatus: null,
             iframe404s: [],
             assetFailures: [],
-            allIframes: [],
-            pageStatus: null,
+            frames: [],
         };
 
-        // Monitor responses only for dashboard (iframe case)
-        if (url.includes("dashboard.adserve.zone/test-404")) {
-            page.on("response", async (response) => {
-                const frame = response.frame();
-                const isInIframe = frame.parentFrame() !== null;
-                const status = response.status();
-                const resourceType = response.request().resourceType();
+        page.removeAllListeners("response");
 
-                if (isInIframe && status === 404) {
-                    if (resourceType === "document") {
-                        issues.iframe404s.push({
-                            iframeUrl: frame.url(),
-                            parentUrl: frame.parentFrame().url(),
-                            status,
-                            timestamp: new Date().toISOString(),
-                        });
-                        console.log(`🚨 iframe 404 (document): ${frame.url()}`);
-                    } else {
-                        issues.assetFailures.push({
-                            type: resourceType,
-                            iframeUrl: frame.url(),
-                            status,
-                            timestamp: new Date().toISOString(),
-                        });
-                        console.log(`⚠️ Asset 404 in iframe → Inside iframe: ${frame.url()}`);
-                    }
-                }
+        // Track 404
+        const failedRequests = new Set();
+        page.on("response", async (res) => {
+            const status = res.status();
+            if (status !== 404) return;
+            const urlRes = res.url();
+            if (failedRequests.has(urlRes)) return;
+            failedRequests.add(urlRes);
+
+            const type = res.request().resourceType();
+            const frame = res.frame();
+            const isInIframe = frame && frame.parentFrame() !== null;
+
+            if (isInIframe && type === "document") {
+                issues.iframe404s.push({ iframeUrl: frame.url(), status });
+            } else if (isInIframe) {
+                issues.assetFailures.push({ url: urlRes, type, iframeUrl: frame.url(), status });
+            }
+        });
+
+        try { await page.goto(url, { waitUntil: "domcontentloaded" }); }
+        catch (err) { console.log(`⚠️ initial page.goto failed → ${err.message}`); }
+
+        await loginIfNeeded();
+
+        try {
+            const response = await page.goto(url, { waitUntil: "domcontentloaded" });
+            issues.pageStatus = response?.status() || null;
+        } catch (err) { console.log(`⚠️ page.goto after login failed → ${err.message}`); }
+
+        await page.waitForTimeout(1500);
+
+        for (const frame of page.frames()) {
+            if (frame.parentFrame()) {
+                const hasError = issues.iframe404s.some(err => err.iframeUrl === frame.url());
+                let title = "";
+                try { title = await frame.title().catch(() => ""); } catch { }
+                issues.frames.push({
+                    url: frame.url(),
+                    name: frame.name(),
+                    title,
+                    hasError
+                });
+            }
+        }
+
+        // summary
+        console.log(`\n${'='.repeat(60)}`);
+        console.log(`📄 Banner URL: ${url}`);
+        console.log(`${'='.repeat(60)}`);
+
+        console.log(`\n🌐 Page Status: ${issues.pageStatus === 200 ? '✅ 200 OK' : `❌ ${issues.pageStatus}`}`);
+
+        console.log(`\n📊 Issues Found:`);
+        console.log(`   🚨 Iframe 404s: ${issues.iframe404s.length > 0 ? `❌ ${issues.iframe404s.length}` : '✅ 0'}`);
+        if (issues.iframe404s.length > 0) {
+            issues.iframe404s.forEach((item, idx) => {
+                console.log(`      ${idx + 1}. ${item.iframeUrl}`);
             });
         }
 
-        await page.goto(url, { waitUntil: "networkidle" });
-
-        if (url.includes("dashboard.adserve.zone/test-404")) {
-            // console.log("🔄 Refreshing dashboard page before testing...");
-            // await page.reload({ waitUntil: "networkidle" });
-            await page.waitForTimeout(10000);
-
-            // เก็บข้อมูล iframe
-            const frames = page.frames();
-            for (const frame of frames) {
-                if (frame.parentFrame()) {
-                    issues.allIframes.push({
-                        url: frame.url(),
-                        name: frame.name(),
-                        hasError: issues.iframe404s.some(err => err.iframeUrl === frame.url()),
-                    });
-
-                    try {
-                        const title = await frame.title();
-                        console.log(`🔍 Iframe loaded: ${frame.url()} → Title: ${title}`);
-                    } catch {
-                        console.log(`⛔ Cannot access DOM of iframe (cross-origin): ${frame.url()}`);
-                    }
-                }
-            }
-        } else {
-            const response = await page.goto(url, { waitUntil: "domcontentloaded" });
-            issues.pageStatus = response.status();
-            if (issues.pageStatus === 404) {
-                console.log(`🚨 Page 404: ${url}`);
-            } else {
-                console.log(`✅ Page loaded OK: ${url} (status ${issues.pageStatus})`);
-            }
+        console.log(`   ⚠️   Asset 404s: ${issues.assetFailures.length > 0 ? `❌ ${issues.assetFailures.length}` : '✅ 0'}`);
+        if (issues.assetFailures.length > 0) {
+            issues.assetFailures.forEach((item, idx) => {
+                console.log(`      ${idx + 1}. ${item.url}`);
+                console.log(`         └─ iframe: ${item.iframeUrl}`);
+            });
         }
 
-        if (
-            issues.iframe404s.length === 0 &&
-            issues.assetFailures.length === 0 &&
-            (!issues.pageStatus || issues.pageStatus !== 404)
-        ) {
-            console.log(`✅ Summary: ${url} → No 404`);
-        } else {
-            console.log(`❌ Summary: ${url} → issues found`);
-            if (issues.iframe404s.length > 0) {
-                console.log(`   - iframe 404: ${issues.iframe404s.length}`);
-            }
-            if (issues.assetFailures.length > 0) {
-                console.log(`   - asset failures: ${issues.assetFailures.length}`);
-            }
-            if (issues.pageStatus === 404) {
-                console.log(`   - page 404`);
-            }
-        }
+        console.log(`\n🖼️ Frames (${issues.frames.length} total):`);
+        issues.frames.forEach((f, idx) => {
+            const statusIcon = f.hasError ? '❌' : '✅';
+            console.log(`\n   ${statusIcon} Frame ${idx + 1}:`);
+            console.log(`      Name: ${f.name || '(no name)'}`);
+            console.log(`      URL:  ${f.url}`);
+            console.log(`      Title: ${f.title || '(no title)'}`);
+        });
+
+        console.log(`\n${'='.repeat(60)}\n`);
 
         allReports.push({ bannerUrl: url, issues });
     }
-
-    await browser.close();
-
+    // report saving
     const reportDir = path.join(__dirname, "reports");
-
-    if (!fs.existsSync(reportDir)) {
-        fs.mkdirSync(reportDir, { recursive: true });
-    }
+    if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
 
     const reportPath = path.join(reportDir, "iframe-404-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(allReports, null, 2));
-
     console.log(`\n💾 Report saved to: ${reportPath}`);
 
-})(); 
+    await browser.close();
+})();
