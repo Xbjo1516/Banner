@@ -1,133 +1,106 @@
 [
   {
-    "bannerUrl": "https://dashboard.adserve.zone/test-404",
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1403/s/pmuyjvytv1",
     "issues": {
-      "iframe404s": [
-        {
-          "iframeUrl": "",
-          "parentUrl": "https://dashboard.adserve.zone/test-404/",
-          "status": 404,
-          "timestamp": "2025-11-14T09:56:30.392Z"
-        },
-        {
-          "iframeUrl": "",
-          "parentUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
-          "status": 404,
-          "timestamp": "2025-11-14T09:56:55.783Z"
-        }
-      ],
-      "assetFailures": [
-        {
-          "type": "image",
-          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=4429b3785a8cdee9a9c11640f3dce2d5&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F",
-          "status": 404,
-          "timestamp": "2025-11-14T09:56:31.591Z"
-        },
-        {
-          "type": "image",
-          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
-          "status": 404,
-          "timestamp": "2025-11-14T09:57:07.760Z"
-        }
-      ],
-      "allIframes": [
-        {
-          "url": "https://lab3.adserve.zone/banners/vvphutuzqwoqrmb/vdeokzubxnmbvbw/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=97de35bed778733747c42234eb3db605&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F",
-          "name": "awxBn-vvphutuzqwoqrmb-R4uzO-ifr",
-          "hasError": false
-        },
-        {
-          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F&id=22901&code=cjwpacxbvlazshv__&ord=d6774bc80fca1a89be8cbdd034f7c5ae&debug=1&adzparam=landingpage::,utm_source::,utm_medium::,utm_campaign::&domain=adserve.zone&r=",
-          "name": "awxBn-kmhwwbvuziqwrab-pE15g-ifr",
-          "hasError": false
-        },
-        {
-          "url": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=4429b3785a8cdee9a9c11640f3dce2d5&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F",
-          "name": "awxBn-omwezjusjepgpmr-0FawX-ifr",
-          "hasError": false
-        }
-      ],
-      "pageStatus": null
-    }
-  },
-  {
-    "bannerUrl": "https://dashboard.adserve.zone/test-404/normal.html",
-    "issues": {
-      "iframe404s": [
-        {
-          "iframeUrl": "",
-          "parentUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
-          "status": 404,
-          "timestamp": "2025-11-14T09:56:55.784Z"
-        }
-      ],
-      "assetFailures": [
-        {
-          "type": "image",
-          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
-          "status": 404,
-          "timestamp": "2025-11-14T09:57:07.761Z"
-        }
-      ],
-      "allIframes": [
-        {
-          "url": "https://lab3.adserve.zone/banners/vvphutuzqwoqrmb/vdeokzubxnmbvbw/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=4e2c682ccdea982be39ea956006d38ab&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2Fnormal.html",
-          "name": "awxBn-vvphutuzqwoqrmb-h5A0E-ifr",
-          "hasError": false
-        }
-      ],
-      "pageStatus": null
-    }
-  },
-  {
-    "bannerUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
-    "issues": {
-      "iframe404s": [
-        {
-          "iframeUrl": "",
-          "parentUrl": "https://dashboard.adserve.zone/test-404/404-index.html",
-          "status": 404,
-          "timestamp": "2025-11-14T09:56:55.784Z"
-        }
-      ],
-      "assetFailures": [
-        {
-          "type": "image",
-          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
-          "status": 404,
-          "timestamp": "2025-11-14T09:57:07.761Z"
-        }
-      ],
-      "allIframes": [
-        {
-          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-index.html&id=22901&code=cjwpacxbvlazshv__&ord=11ee448b04b736d9508e688f7bb5ae15&debug=1&adzparam=landingpage::,utm_source::,utm_medium::,utm_campaign::&domain=adserve.zone&r=",
-          "name": "awxBn-kmhwwbvuziqwrab-ZTn2Q-ifr",
-          "hasError": false
-        }
-      ],
-      "pageStatus": null
-    }
-  },
-  {
-    "bannerUrl": "https://dashboard.adserve.zone/test-404/404-some-asset.html",
-    "issues": {
+      "pageStatus": 200,
       "iframe404s": [],
-      "assetFailures": [
+      "assetFailures": [],
+      "frames": [
         {
-          "type": "image",
-          "iframeUrl": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
-          "status": 404,
-          "timestamp": "2025-11-14T09:57:07.762Z"
-        }
-      ],
-      "allIframes": [
+          "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=d7b5ead0b90a75926213b3fc00b43260&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-ljusdbrammqfpqq-K2wpv-ifr",
+          "title": "2000x600",
+          "hasError": false
+        },
         {
-          "url": "https://lab3.adserve.zone/banners/omwezjusjepgpmr/pklxohjbamgnsgc/index.html?adzparam=landingpage%3A%3A%2Cutm_source%3A%3A%2Cutm_medium%3A%3A%2Cutm_campaign%3A%3A&debug=1&ord=1a2fe648aca670b40d7c410d1d4db92c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Ftest-404%2F404-some-asset.html",
-          "name": "awxBn-omwezjusjepgpmr-rGunB-ifr",
+          "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=62bc7f01129febfa7d9e37c517f66ee3&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-gzeakioggtuorbs-RF0aK-ifr",
+          "title": "2000x300",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=6fc166ed12b17220e41fcf2c66b3e7ea&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-gblsptljclgrwpf-fbEUC-ifr",
+          "title": "640x400",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=5fdbc882bd67b8b3d1e8a27463c3360e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-gblsptljclgrwpf-mMpBN-ifr",
+          "title": "640x400",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=e69e453dc5d54a9a41035b462637afc3&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-jmxrulykgthxluz-0ZgWz-ifr",
+          "title": "970x365",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=4a320e3579291418853706876dc7ee8c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-rxsyrryycilalac-NCejX-ifr",
+          "title": "980x300",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=72b03cbbdfcbaea12a252e4d7f3ce32d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-pvdfhmxljdkrrwh-UAY7K-ifr",
+          "title": "970x250",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=4bda4b7cc95b4f39dbcb27539fd6851e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-kmrarhvyqkxumzk-ubSXQ-ifr",
+          "title": "580x400",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=c240f76a0c37b6ccc8bc8564ac2541a3&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-hvbxcrfadwgpyjn-KRjsn-ifr",
+          "title": "300x250",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=249cf978927dc389559c77ac5fe55087&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-dvoefjynskjfcji-6GLDn-ifr",
+          "title": "300x600",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=4b5153ea66bd1e6238fa9fb0d4568c90&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-crhjfdvrgxrmmuz-89UV5-ifr",
+          "title": "320x400",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=1093b2896565af08a6d729af3a5df994&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-vkslvlcmlafwcep-GSn7H-ifr",
+          "title": "180x500",
+          "hasError": false
+        },
+        {
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=ca085225f194101e235956a3ad04f357&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "name": "awxBn-xlkdxaqiicpwhwv-gyz09-ifr",
+          "title": "160x600",
           "hasError": false
         }
-      ],
-      "pageStatus": null
+      ]
+    }
+  },
+  {
+    "bannerUrl": "https://dashboard.adserve.zone/preview/1402/s/tsuzensnj6",
+    "issues": {
+      "pageStatus": 200,
+      "iframe404s": [],
+      "assetFailures": [],
+      "frames": [
+        {
+          "url": "https://lab3.adserve.zone/banners/bjndkelnsvoiwiw/bekdzrjrjjttcaj/index.html?ord=631788e09a1704a0fd5472ab39f9f09e&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1402%2Fs%2Ftsuzensnj6",
+          "name": "awxBn-bjndkelnsvoiwiw-HsuSs-ifr",
+          "title": "320x400",
+          "hasError": false
+        }
+      ]
     }
   }
 ]
