@@ -29,7 +29,7 @@ async function loginIfNeeded(page) {
         return;
     }
 
-    console.log("ℹ️ No login required");
+    console.log("ℹ️  Skipping login, no login required");
 }
 
 async function analyzeBanner(browser, url) {
@@ -126,4 +126,4 @@ async function run() {
     }
 
     await browser.close();
-}run();
+} run();

@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 (async () => {
-    const browser = await chromium.launch({ headless: false });
+    const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
     const login = { email: 'access@adserve.no' };
@@ -47,7 +47,7 @@ const path = require("path");
             return;
         }
 
-        console.log("ℹ️  No login required");
+        console.log("ℹ️  Skipping login, no login required");
     }
 
     for (const url of bannerUrls) {
@@ -131,7 +131,7 @@ const path = require("path");
             });
         }
 
-        console.log(`\n🖼️ Frames (${issues.frames.length} total):`);
+        console.log(`\n🖼️  Frames (${issues.frames.length} total):`);
         issues.frames.forEach((f, idx) => {
             const statusIcon = f.hasError ? '❌' : '✅';
             console.log(`\n   ${statusIcon} Frame ${idx + 1}:`);
