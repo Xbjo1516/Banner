@@ -1,0 +1,901 @@
+{
+  "bannerUrl": "https://dashboard.adserve.zone/preview/1403/s/pmuyjvytv1",
+  "frames": [
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=c4939b20d5ae08550e5a967e2aedaaa8&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 8,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22912&code=xzuzdiapqywwwhl&ord=d010d8ced465fa8ae423800d69e963ea&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/index.html?ord=c4939b20d5ae08550e5a967e2aedaaa8&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763118127",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/images/CTA.webp?v=0010",
+          "type": "image",
+          "sizeBytes": 4104,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/images/posterimage.webp?v=0010",
+          "type": "image",
+          "sizeBytes": 34352,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/images/bg.webp?v=0010",
+          "type": "image",
+          "sizeBytes": 6426,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/images/tagline.webp?v=0010",
+          "type": "image",
+          "sizeBytes": 1900,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/ljusdbrammqfpqq/xzuzdiapqywwwhl/images/TT.webp?v=0010",
+          "type": "image",
+          "sizeBytes": 102700,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=71b71e6e7e9fb4df30492553c11e47cc&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 8,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22913&code=jhvfwmcftarjuua&ord=6a81b071fd7e74f9a8c56d10db9ce0eb&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/index.html?ord=71b71e6e7e9fb4df30492553c11e47cc&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763118178",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/images/CTA.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 4104,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/images/posterimage.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 20880,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/images/tagline.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 1464,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/images/bg.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 3672,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/gzeakioggtuorbs/jhvfwmcftarjuua/images/TT.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 62572,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=21ce1c69f7387dcadf77fda1dbf474d3&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 10,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22916&code=ivqcvxbswngxquv&ord=6a81b071fd7e74f9a8c56d10db9ce0eb&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/index.html?ord=21ce1c69f7387dcadf77fda1dbf474d3&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763120771",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/images/CTA.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 1378,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/chars.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 2254,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/bg.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 2364,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/tagline.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 1166,
+          "status": 200
+        },
+        {
+          "filename": "bg2.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/bg2.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 1894,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/TT.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 39730,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/ivqcvxbswngxquv/images/posterimage.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 9894,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=6c3664c3d2298fc9b42e7a44a7d2632c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 10,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22915&code=sajekrsqhspftbf&ord=d010d8ced465fa8ae423800d69e963ea&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/index.html?ord=6c3664c3d2298fc9b42e7a44a7d2632c&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763120773",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/images/CTA.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 1378,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/bg.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 2364,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/chars.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 2254,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/tagline.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 1166,
+          "status": 200
+        },
+        {
+          "filename": "bg2.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/bg2.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 1894,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/TT.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 39730,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/gblsptljclgrwpf/sajekrsqhspftbf/images/posterimage.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 9894,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=61f1c04cc165fe9124cc3c58c094e936&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 8,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22911&code=celamcfpkefflzu&ord=3cad7df464296441e2043aef81ae42df&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/index.html?ord=61f1c04cc165fe9124cc3c58c094e936&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763118153",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/images/posterimage.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 14660,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/images/CTA.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 890,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/images/tagline.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 938,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/images/bg.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 2674,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/jmxrulykgthxluz/celamcfpkefflzu/images/TT.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 26678,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=24081df4e7737c7a80b241360a25fade&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 8,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22910&code=owkupldxwlafbkd&ord=d010d8ced465fa8ae423800d69e963ea&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/index.html?ord=24081df4e7737c7a80b241360a25fade&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763118138",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/images/CTA.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 924,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/images/posterimage.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 15962,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/images/bg.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 2266,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/images/tagline.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 990,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/rxsyrryycilalac/owkupldxwlafbkd/images/TT.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 28538,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=d5b65d2dc28f825a50cb5f50f1f1e01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 8,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22914&code=binbdcnnymbghvh&ord=3cad7df464296441e2043aef81ae42df&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/index.html?ord=d5b65d2dc28f825a50cb5f50f1f1e01f&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763118165",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/images/posterimage.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 15594,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/images/CTA.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 670,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/images/tagline.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 848,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/images/bg.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 2266,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/pvdfhmxljdkrrwh/binbdcnnymbghvh/images/TT.webp?v=0006",
+          "type": "image",
+          "sizeBytes": 20380,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=36d58f5288734cec2468ca8596bf99fb&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 10,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22904&code=ktzzvwqotettxqq&ord=3cad7df464296441e2043aef81ae42df&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/index.html?ord=36d58f5288734cec2468ca8596bf99fb&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763120835",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/images/CTA.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 4596,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/tagline.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 1030,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/bg.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 2564,
+          "status": 200
+        },
+        {
+          "filename": "bg2.webp",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/bg2.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 2074,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/chars.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 3854,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/TT.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 41176,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/kmrarhvyqkxumzk/ktzzvwqotettxqq/images/posterimage.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 9842,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=dedf5260692c125341efe12251c97b8d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 9,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22907&code=boqlasdqyyhrivt&ord=3cad7df464296441e2043aef81ae42df&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/index.html?ord=dedf5260692c125341efe12251c97b8d&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763120885",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/images/CTA.webp?v=0009",
+          "type": "image",
+          "sizeBytes": 2112,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/chars.webp?v=0009",
+          "type": "image",
+          "sizeBytes": 3146,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/TT.webp?v=0009",
+          "type": "image",
+          "sizeBytes": 30874,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/tagline.webp?v=0009",
+          "type": "image",
+          "sizeBytes": 614,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/bg.webp?v=0009",
+          "type": "image",
+          "sizeBytes": 1556,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/hvbxcrfadwgpyjn/boqlasdqyyhrivt/images/posterimage.webp?v=0009",
+          "type": "image",
+          "sizeBytes": 4048,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=47be5b3c310c21695622c7fcfd7081b4&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 9,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22905&code=nkfxytmqlmeisxn&ord=20cff91723c72b3062440c6784c0dbb3&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/index.html?ord=47be5b3c310c21695622c7fcfd7081b4&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763121194",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/images/CTA.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 3028,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/tagline.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 768,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/bg.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 2184,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/TT.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 26404,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/chars.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 4756,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/dvoefjynskjfcji/nkfxytmqlmeisxn/images/posterimage.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 9866,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=6e11cdb75f93d1b380bb3c4bf58a3d47&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 9,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22906&code=vvhfihszaamajxf&ord=20cff91723c72b3062440c6784c0dbb3&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/index.html?ord=6e11cdb75f93d1b380bb3c4bf58a3d47&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763121160",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/images/CTA.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 3028,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/tagline.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 460,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/chars.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 3214,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/TT.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 28008,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/bg.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 2370,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/crhjfdvrgxrmmuz/vvhfihszaamajxf/images/posterimage.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 5990,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=eb9ac31237f29f69d07d04716476fde0&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 9,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22908&code=exhrlutssbblwgc&ord=1f67139285ec42d69455d521cbd52a96&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/index.html?ord=eb9ac31237f29f69d07d04716476fde0&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763121221",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/images/CTA.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 2142,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/bg.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 1900,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/tagline.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 774,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/TT.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 28822,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/chars.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 2826,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/vkslvlcmlafwcep/exhrlutssbblwgc/images/posterimage.webp?v=0008",
+          "type": "image",
+          "sizeBytes": 5874,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "frameUrl": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=f987ebeb368ee3f5e32350d1183db4cf&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+      "totalRequests": 9,
+      "duplicates": [],
+      "assets": [
+        {
+          "filename": "ads_banner_html",
+          "url": "https://lab3.adserve.zone/go/ads_banner_html?parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1&id=22909&code=oxhitrkzfjelxtx&ord=a855dc3af29a3f113cae4ea31eb3bd19&debug=0&domain=adserve.zone",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "index.html",
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/index.html?ord=f987ebeb368ee3f5e32350d1183db4cf&parent_url=https%3A%2F%2Fdashboard.adserve.zone%2Fpreview%2F1403%2Fs%2Fpmuyjvytv1",
+          "type": "document",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "adserve_enabler.js",
+          "url": "https://lab3.adserve.zone/js/adserve_enabler.js?v=1763121235",
+          "type": "script",
+          "sizeBytes": null,
+          "status": 200
+        },
+        {
+          "filename": "CTA.webp",
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/images/CTA.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 2142,
+          "status": 200
+        },
+        {
+          "filename": "tagline.webp",
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/tagline.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 774,
+          "status": 200
+        },
+        {
+          "filename": "TT.webp",
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/TT.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 28822,
+          "status": 200
+        },
+        {
+          "filename": "chars.webp",
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/chars.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 3830,
+          "status": 200
+        },
+        {
+          "filename": "bg.webp",
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/bg.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 1728,
+          "status": 200
+        },
+        {
+          "filename": "posterimage.webp",
+          "url": "https://lab3.adserve.zone/banners/xlkdxaqiicpwhwv/oxhitrkzfjelxtx/images/posterimage.webp?v=0007",
+          "type": "image",
+          "sizeBytes": 5042,
+          "status": 200
+        }
+      ]
+    }
+  ]
+}
