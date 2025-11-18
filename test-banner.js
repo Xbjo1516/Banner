@@ -7,14 +7,19 @@ const path = require("path");
     const page = await browser.newPage();
 
     const login = { email: 'access@adserve.no' };
-    const bannerUrls = [
-        // "https://dashboard.adserve.zone/test-404",
-        // "https://dashboard.adserve.zone/test-404/normal.html", //ไม่ติด
-        // "https://dashboard.adserve.zone/test-404/404-index.html", //ติด 404 หน้าเพจไม่มีอะไรแสดงได้เลย
-        // "https://dashboard.adserve.zone/test-404/404-some-asset.html", //ติดบางอย่างในเฟรม
-        "https://dashboard.adserve.zone/preview/1403/s/pmuyjvytv1",
-        "https://dashboard.adserve.zone/preview/1402/s/tsuzensnj6",
-    ];
+    // const bannerUrls = [
+    //     "https://dashboard.adserve.zone/test-404",
+    //     "https://dashboard.adserve.zone/test-404/normal.html", //ไม่ติด
+    //     "https://dashboard.adserve.zone/test-404/404-index.html", //ติด 404 หน้าเพจไม่มีอะไรแสดงได้เลย
+    //     "https://dashboard.adserve.zone/test-404/404-some-asset.html", //ติดบางอย่างในเฟรม
+    // ];
+
+    const bannerUrls = process.argv.slice(2);
+    if (bannerUrls.length === 0) {
+        console.log("❌ กรุณาใส่ลิงก์ เช่น:");
+        console.log("   node test.js <url1> <url2> <url3>");
+        process.exit(1);
+    }
 
     const allReports = [];
 
@@ -26,7 +31,7 @@ const path = require("path");
         const visible = await modal.isVisible().catch(() => false);
 
         if (exists && visible) {
-            console.log("🔐 Login modal detected → logging in...");
+            // console.log("🔐 Login modal detected → logging in...");
             const emailInput = modal.locator('input[type="email"], input[placeholder*="mail" i]').first();
             const submitBtn = modal.locator('button').first();
             await emailInput.waitFor({ state: 'visible' });

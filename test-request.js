@@ -4,14 +4,18 @@ const path = require("path");
 
 const LOGIN_EMAIL = "access@adserve.no";
 const WAIT_TIME = 5000;
-const ALLOWED_DOMAINS = ["lab3.adserve.zone"];
+const ALLOWED_DOMAINS = [
+    "lab3.adserve.zone",
+    "cdn3.adserve.zone",
+    "dynamic.adserve.zone",
+];
 const MAX_REQUESTS_PER_FRAME = 20;
 
 async function loginIfNeeded(page) {
     await page.waitForTimeout(500);
     const modal = page.locator("#access-modal");
     if (await modal.count() && await modal.isVisible().catch(() => false)) {
-        console.log("🔐 Login modal detected → logging in...");
+        // console.log("🔐 Login modal detected → logging in...");
         await modal.locator('input[type="email"], input[placeholder*="mail" i]').first().fill(LOGIN_EMAIL);
         await modal.locator('button').first().click();
         await page.waitForTimeout(1000);
@@ -106,10 +110,15 @@ async function analyzeBanner(browser, url) {
 
 async function run() {
     const browser = await chromium.launch({ headless: true });
-    const bannerUrls = [
-        "https://dashboard.adserve.zone/preview/1403/s/pmuyjvytv1",
-        "https://dashboard.adserve.zone/preview/1402/s/tsuzensnj6",
-    ];
+    // const bannerUrls = [
+    // ];
+
+    const bannerUrls = process.argv.slice(2);
+    if (bannerUrls.length === 0) {
+        console.log("❌ กรุณาใส่ลิงก์ เช่น:");
+        console.log("   node test.js <url1> <url2> <url3>");
+        process.exit(1);
+    }
 
     const reportDir = path.join(__dirname, "reports");
     if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
