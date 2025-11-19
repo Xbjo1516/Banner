@@ -87,6 +87,7 @@ const path = require("path");
         String(now.getHours()).padStart(2, "0") + "-" +
         String(now.getMinutes()).padStart(2, "0") + "-" +
         String(now.getSeconds()).padStart(2, "0");
+        
 
     const sessionDir = path.join(rootDir, timestamp);
     fs.mkdirSync(sessionDir);
