@@ -1,27 +1,47 @@
-const { chromium } = require("playwright");
+const { chromium, firefox } = require("playwright");
 const fs = require("fs");
 const path = require("path");
 
 (async () => {
-    const browser = await chromium.launch({ headless: true });
+    const browser = await firefox.launch({ headless: true });
     const page = await browser.newPage();
 
     const login = { email: 'access@adserve.no' };
-    // const bannerUrls = [
-    //     "https://dashboard.adserve.zone/test-404",
-    //     "https://dashboard.adserve.zone/test-404/normal.html", //ไม่ติด
-    //     "https://dashboard.adserve.zone/test-404/404-index.html", //ติด 404 หน้าเพจไม่มีอะไรแสดงได้เลย
-    //     "https://dashboard.adserve.zone/test-404/404-some-asset.html", //ติดบางอย่างในเฟรม
-    // ];
-
     const bannerUrls = process.argv.slice(2);
+
+    const bannerUrl = [
+        "https://dashboard.adserve.zone/preview/1402/test/22903",
+        "https://dashboard.adserve.zone/preview/1403/test/22912",
+        "https://dashboard.adserve.zone/preview/1403/test/22913",
+        "https://dashboard.adserve.zone/preview/1403/test/22910",
+        "https://dashboard.adserve.zone/preview/1403/test/22911",
+        "https://dashboard.adserve.zone/preview/1403/test/22914",
+        "https://dashboard.adserve.zone/preview/1403/test/22916",
+        "https://dashboard.adserve.zone/preview/1403/test/22915",
+        "https://dashboard.adserve.zone/preview/1403/test/22904",
+        "https://dashboard.adserve.zone/preview/1403/test/22906",
+        "https://dashboard.adserve.zone/preview/1403/test/22905",
+        "https://dashboard.adserve.zone/preview/1403/test/22907",
+        "https://dashboard.adserve.zone/preview/1403/test/22908",
+        "https://dashboard.adserve.zone/preview/1403/test/22909",
+    ]
+
     if (bannerUrls.length === 0) {
-        console.log("❌ กรุณาใส่ลิงก์ เช่น:");
-        console.log("   node test.js <url1> <url2> <url3>");
+        console.log("❌ Please provide a link, for example:\nnode test.js <url1> <url2> <url3>");
         process.exit(1);
     }
 
-    const allReports = [];
+    function deleteOld404Folders(rootDir) {
+        if (!fs.existsSync(rootDir)) return;
+        const items = fs.readdirSync(rootDir);
+        for (const item of items) {
+            const full = path.join(rootDir, item);
+            if (fs.statSync(full).isDirectory() && item.startsWith("test-404-")) {
+                fs.rmSync(full, { recursive: true, force: true });
+                console.log(`🧹 Deleted old folder: ${full}`);
+            }
+        }
+    }
 
     async function loginIfNeeded() {
         await page.waitForTimeout(500);
@@ -31,7 +51,6 @@ const path = require("path");
         const visible = await modal.isVisible().catch(() => false);
 
         if (exists && visible) {
-            // console.log("🔐 Login modal detected → logging in...");
             const emailInput = modal.locator('input[type="email"], input[placeholder*="mail" i]').first();
             const submitBtn = modal.locator('button').first();
             await emailInput.waitFor({ state: 'visible' });
@@ -44,7 +63,6 @@ const path = require("path");
 
         const pageEmail = page.locator('input[type="email"]');
         if (await pageEmail.isVisible().catch(() => false)) {
-            console.log("🔐 Login page detected → logging in...");
             await pageEmail.fill(login.email);
             await page.getByRole('button', { name: 'Access' }).click();
             await page.waitForTimeout(1000);
@@ -55,8 +73,31 @@ const path = require("path");
         console.log("ℹ️  Skipping login, no login required");
     }
 
-    for (const url of bannerUrls) {
+    const rootDir = path.join(__dirname, "reports");
+    if (!fs.existsSync(rootDir)) fs.mkdirSync(rootDir);
+
+    deleteOld404Folders(rootDir);
+
+    const now = new Date();
+    const timestamp =
+        "test-404-" +
+        now.getFullYear() + "-" +
+        String(now.getMonth() + 1).padStart(2, "0") + "-" +
+        String(now.getDate()).padStart(2, "0") + "_" +
+        String(now.getHours()).padStart(2, "0") + "-" +
+        String(now.getMinutes()).padStart(2, "0") + "-" +
+        String(now.getSeconds()).padStart(2, "0");
+
+    const sessionDir = path.join(rootDir, timestamp);
+    fs.mkdirSync(sessionDir);
+
+    let index = 1;
+
+    for (const url of bannerUrls || bannerUrl) {
         console.log(`\n🚀 Testing banner: ${url}`);
+
+        const linkDir = path.join(sessionDir, `link-${index}`);
+        fs.mkdirSync(linkDir);
 
         const issues = {
             pageStatus: null,
@@ -67,11 +108,12 @@ const path = require("path");
 
         page.removeAllListeners("response");
 
-        // Track 404
         const failedRequests = new Set();
+
         page.on("response", async (res) => {
             const status = res.status();
             if (status !== 404) return;
+
             const urlRes = res.url();
             if (failedRequests.has(urlRes)) return;
             failedRequests.add(urlRes);
@@ -83,19 +125,24 @@ const path = require("path");
             if (isInIframe && type === "document") {
                 issues.iframe404s.push({ iframeUrl: frame.url(), status });
             } else if (isInIframe) {
-                issues.assetFailures.push({ url: urlRes, type, iframeUrl: frame.url(), status });
+                issues.assetFailures.push({
+                    url: urlRes,
+                    type,
+                    iframeUrl: frame.url(),
+                    status
+                });
             }
         });
 
         try { await page.goto(url, { waitUntil: "domcontentloaded" }); }
-        catch (err) { console.log(`⚠️ initial page.goto failed → ${err.message}`); }
+        catch { }
 
         await loginIfNeeded();
 
         try {
             const response = await page.goto(url, { waitUntil: "domcontentloaded" });
             issues.pageStatus = response?.status() || null;
-        } catch (err) { console.log(`⚠️ page.goto after login failed → ${err.message}`); }
+        } catch { }
 
         await page.waitForTimeout(1500);
 
@@ -113,49 +160,51 @@ const path = require("path");
             }
         }
 
-        // summary
-        console.log(`\n${'='.repeat(60)}`);
-        console.log(`📄 Banner URL: ${url}`);
-        console.log(`${'='.repeat(60)}`);
-
-        console.log(`\n🌐 Page Status: ${issues.pageStatus === 200 ? '✅ 200 OK' : `❌ ${issues.pageStatus}`}`);
-
-        console.log(`\n📊 Issues Found:`);
-        console.log(`   🚨 Iframe 404s: ${issues.iframe404s.length > 0 ? `❌ ${issues.iframe404s.length}` : '✅ 0'}`);
-        if (issues.iframe404s.length > 0) {
-            issues.iframe404s.forEach((item, idx) => {
-                console.log(`      ${idx + 1}. ${item.iframeUrl}`);
-            });
+        const screenshotPath = path.join(linkDir, "screenshot.jpg");
+        try {
+            await page.waitForTimeout(10000);
+            await page.screenshot({ path: screenshotPath, fullPage: true });
+            console.log(`📸 Screenshot saved: ${screenshotPath}`);
+        } catch (e) {
+            console.log(`⚠️ Screenshot failed: ${e.message}`);
         }
 
-        console.log(`   ⚠️   Asset 404s: ${issues.assetFailures.length > 0 ? `❌ ${issues.assetFailures.length}` : '✅ 0'}`);
-        if (issues.assetFailures.length > 0) {
-            issues.assetFailures.forEach((item, idx) => {
-                console.log(`      ${idx + 1}. ${item.url}`);
-                console.log(`         └─ iframe: ${item.iframeUrl}`);
-            });
-        }
 
-        console.log(`\n🖼️  Frames (${issues.frames.length} total):`);
+        const reportLines = [];
+
+        reportLines.push(`URL: ${url}`);
+        reportLines.push(`Timestamp: ${timestamp}`);
+        reportLines.push("");
+
+        reportLines.push(`Page Status: ${issues.pageStatus}`);
+        reportLines.push("");
+
+        reportLines.push(`Iframe 404s (${issues.iframe404s.length}):`);
+        issues.iframe404s.forEach((i, idx) => {
+            reportLines.push(`  ${idx + 1}. ${i.iframeUrl}`);
+        });
+        reportLines.push("");
+
+        reportLines.push(`Asset 404s (${issues.assetFailures.length}):`);
+        issues.assetFailures.forEach((i, idx) => {
+            reportLines.push(`  ${idx + 1}. ${i.url}`);
+            reportLines.push(`     iframe: ${i.iframeUrl}`);
+        });
+        reportLines.push("");
+
+        reportLines.push(`Frames (${issues.frames.length}):`);
         issues.frames.forEach((f, idx) => {
-            const statusIcon = f.hasError ? '❌' : '✅';
-            console.log(`\n   ${statusIcon} Frame ${idx + 1}:`);
-            console.log(`      Name: ${f.name || '(no name)'}`);
-            console.log(`      URL:  ${f.url}`);
-            console.log(`      Title: ${f.title || '(no title)'}`);
+            reportLines.push(`  Frame ${idx + 1}:`);
+            reportLines.push(`     URL: ${f.url}`);
+            reportLines.push(`     Name: ${f.name}`);
+            reportLines.push(`     Title: ${f.title}`);
         });
 
-        console.log(`\n${'='.repeat(60)}\n`);
+        fs.writeFileSync(path.join(linkDir, "report.txt"), reportLines.join("\n"), "utf-8");
+        console.log(`📁 Report saved to: ${path.join(linkDir, "report.txt")}`);
 
-        allReports.push({ bannerUrl: url, issues });
+        index++;
     }
-    // report saving
-    const reportDir = path.join(__dirname, "reports");
-    if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
-
-    const reportPath = path.join(reportDir, "iframe-404-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(allReports, null, 2));
-    console.log(`\n💾 Report saved to: ${reportPath}`);
 
     await browser.close();
 })();
