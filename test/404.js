@@ -155,7 +155,7 @@ async function loginIfNeeded(page) {
 
         const screenshotPath = path.join(linkDir, "screenshot.jpg");
         try {
-            await page.waitForTimeout(1000);
+            await page.waitForTimeout(10000);
             await page.screenshot({ path: screenshotPath, fullPage: true });
             console.log(`📸 Screenshot saved: ${screenshotPath}`);
         } catch (e) {

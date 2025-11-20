@@ -4,23 +4,16 @@ import path from "path";
 import { fileURLToPath } from "url";
 import links from '../data/link.json' with { type: 'json' };
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LOGIN_EMAIL = "access@adserve.no";
 const WAIT_TIME = 5000;
+const ALLOWED_DOMAINS = ["lab3.adserve.zone", "cdn3.adserve.zone", "dynamic.adserve.zone"];
 
-const ALLOWED_DOMAINS = [
-    "lab3.adserve.zone",
-    "cdn3.adserve.zone",
-    "dynamic.adserve.zone"
-];
-
-function deleteOldTimestampFolders(rootDir) {
+function deleteOldFolders(rootDir, prefix = "duplicate-") {
     if (!fs.existsSync(rootDir)) return;
-    for (const item of fs.readdirSync(rootDir)) {
-        const full = path.join(rootDir, item);
-        if (fs.statSync(full).isDirectory() && item.startsWith("duplicate-")) {
+    for (const d of fs.readdirSync(rootDir)) {
+        const full = path.join(rootDir, d);
+        if (fs.statSync(full).isDirectory() && d.startsWith(prefix)) {
             fs.rmSync(full, { recursive: true, force: true });
             console.log(`🧹 Deleted old test folder: ${full}`);
         }
@@ -34,16 +27,14 @@ async function loginIfNeeded(page) {
         await modal.locator('input[type="email"]').first().fill(LOGIN_EMAIL);
         await modal.locator("button").first().click();
         await page.waitForTimeout(1000);
-        console.log("✅ Login success (modal)");
-        return;
+        return console.log("✅ Login success (modal)");
     }
     const pageEmail = page.locator('input[type="email"]');
     if (await pageEmail.isVisible().catch(() => false)) {
         await pageEmail.fill(LOGIN_EMAIL);
         await page.getByRole("button", { name: "Access" }).click();
         await page.waitForTimeout(1200);
-        console.log("✅ Login success (full page)");
-        return;
+        return console.log("✅ Login success (full page)");
     }
     console.log("ℹ️  No login required");
 }
@@ -51,129 +42,113 @@ async function loginIfNeeded(page) {
 async function analyzeBanner(browser, url, saveDir) {
     const page = await browser.newPage({ bypassCSP: true });
 
-    await page.route("**/*", route => {
-        const headers = { ...route.request().headers(), "Cache-Control": "no-cache", "Pragma": "no-cache" };
-        route.continue({ headers });
-    });
+    await page.route("**/*", route => route.continue({
+        headers: { ...route.request().headers(), "Cache-Control": "no-cache", "Pragma": "no-cache" }
+    }));
 
     console.log(`\n🚀 Testing banner: ${url}`);
-
-    let initialKB = 0;
-    let initialCount = 0;
     const frameData = new Map();
+    let initialKB = 0, initialCount = 0;
 
-    page.on("response", async (res) => {
+    page.on("response", async res => {
         try {
             const req = res.request();
             const frame = req.frame();
             const resUrl = req.url();
             const hostname = new URL(resUrl).hostname;
-            const domainAllowed = ALLOWED_DOMAINS.some(d => hostname.includes(d));
+            if (!ALLOWED_DOMAINS.some(d => hostname.includes(d))) return;
 
             let kb = 0;
-            try { const buffer = await res.body(); kb = buffer.length / 1024; } catch { kb = 0; }
+            try { kb = (await res.body()).length / 1024; } catch { }
 
             if (frame === page.mainFrame()) { initialKB += kb; initialCount++; return; }
-            if (!domainAllowed) return;
 
             if (!frameData.has(frame)) frameData.set(frame, { assets: [], totalKB: 0, totalCount: 0 });
             const f = frameData.get(frame);
 
             f.assets.push({
                 filename: path.basename(new URL(resUrl).pathname),
-                url: resUrl,
-                sizeKB: kb,
-                type: req.resourceType(),
-                status: res.status()
+                url: resUrl, sizeKB: kb, type: req.resourceType(), status: res.status()
             });
-
-            f.totalKB += kb;
-            f.totalCount++;
+            f.totalKB += kb; f.totalCount++;
         } catch { }
     });
 
     await page.goto(url, { waitUntil: "domcontentloaded" }).catch(() => { });
     await loginIfNeeded(page);
-
-    initialKB = 0;
-    initialCount = 0;
-
+    initialKB = 0; initialCount = 0;
     await page.goto(url, { waitUntil: "domcontentloaded" }).catch(() => { });
     await page.waitForTimeout(WAIT_TIME);
 
-    await page.evaluate(async () => {
-        const imgs = [...document.querySelectorAll("img")];
-        await Promise.all(imgs.map(img => img.complete ? null : new Promise(res => (img.onload = res))));
-    }).catch(() => { });
+    await page.evaluate(async () => Promise.all([...document.querySelectorAll("img")].map(img => img.complete ? null : new Promise(res => img.onload = res))));
 
     const screenshotPath = path.join(saveDir, "screenshot.jpg");
-    await page.screenshot({ path: screenshotPath, fullPage: true }).catch(() => { });
+    try {
+        await page.waitForTimeout(1000);
+        await page.screenshot({ path: screenshotPath, fullPage: true });
+        console.log(`📸 Screenshot saved: ${screenshotPath}`);
+    } catch (e) {
+        console.log(`⚠️  Screenshot failed: ${e.message}`);
+    }
     await page.close();
 
     const frameReport = [];
     for (const [frame, data] of frameData.entries()) {
         const nameCount = {};
         data.assets.forEach(a => nameCount[a.filename] = (nameCount[a.filename] || 0) + 1);
-        const duplicates = Object.entries(nameCount).filter(([_, count]) => count > 1).map(([name]) => name);
+        const duplicates = Object.entries(nameCount)
+            .filter(([name, count]) => count > 1 && !/^track-video/i.test(name))
+            .map(([name]) => name);
 
-        frameReport.push({ frameUrl: frame.url(), totalKB: data.totalKB.toFixed(2), totalCount: data.totalCount, duplicates });
+        frameReport.push({
+            frameUrl: frame.url(),
+            totalKB: data.totalKB.toFixed(2),
+            totalCount: data.totalCount,
+            duplicates
+        });
     }
-
     return { bannerUrl: url, initial: { kb: initialKB.toFixed(2), count: initialCount }, frames: frameReport };
 }
 
 async function run() {
     const browser = await firefox.launch({ headless: true });
-
     let bannerUrls = process.argv.slice(2);
-
-    let categoryToTest = null;
-
-    if (bannerUrls.length === 0) {
-        categoryToTest = "FiveNights"; 
-        bannerUrls = links[categoryToTest];
-        if (!bannerUrls || bannerUrls.length === 0) {
-            console.error(`❌ Category "${categoryToTest}" not found or empty`);
-            await browser.close();
-            return;
-        }
-    } else {
-        categoryToTest = "Manual Input links";
+    let category = "Manual Input links";
+    if (!bannerUrls.length) {
+        category = "FiveNights";
+        bannerUrls = links[category];
+        if (!bannerUrls || !bannerUrls.length) { console.error(`❌ Category "${category}" not found or empty`); await browser.close(); return; }
     }
 
-
     const rootDir = path.join(__dirname, "..", "reports");
-    if (!fs.existsSync(rootDir)) fs.mkdirSync(rootDir);
+    fs.mkdirSync(rootDir, { recursive: true });
+    deleteOldFolders(rootDir);
 
-    deleteOldTimestampFolders(rootDir);
-
-    const now = new Date();
-    const timestamp = `duplicate-${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}_${String(now.getHours()).padStart(2, "0")}-${String(now.getMinutes()).padStart(2, "0")}-${String(now.getSeconds()).padStart(2, "0")}`;
-
+    const timestamp = `duplicate-${new Date().toISOString().replace(/[:T]/g, "-").split(".")[0]}`;
     const sessionDir = path.join(rootDir, timestamp);
-    fs.mkdirSync(sessionDir);
+    fs.mkdirSync(sessionDir, { recursive: true });
 
     let index = 1;
     for (const url of bannerUrls) {
         const linkDir = path.join(sessionDir, `link-${index}`);
-        fs.mkdirSync(linkDir);
+        fs.mkdirSync(linkDir, { recursive: true });
 
         const report = await analyzeBanner(browser, url, linkDir);
-
-        const lines = [];
-        lines.push(`Category: ${categoryToTest}`);
-        lines.push(`URL: ${report.bannerUrl}`);
-        lines.push(`Timestamp: ${timestamp}`);
-        lines.push(`Allowed Domains: ${ALLOWED_DOMAINS.join(", ")}`);
-        lines.push("");
-        lines.push("=== Initial Load Summary ===");
-        lines.push(`Total Size (Resources loaded by main frame): ${report.initial.kb} KB`);
-        lines.push(`Requests: ${report.initial.count}`);
-        lines.push("");
+        const lines = [
+            `Category: ${category}`,
+            `URL: ${report.bannerUrl}`,
+            `Timestamp: ${timestamp}`,
+            `Allowed Domains: ${ALLOWED_DOMAINS.join(",")}`,
+            "",
+            "=== Initial Load Summary ===",
+            `Total size (main frame): ${report.initial.kb} KB`,
+            `Requests: ${report.initial.count}`,
+            ""
+        ];
 
         report.frames.forEach((f, i) => {
             lines.push(`Frame ${i + 1}: ${f.frameUrl}`);
-            lines.push(`Total Size: ${f.totalKB} KB`);
+            lines.push(`Total size (frame): ${f.totalKB} KB`);
             lines.push(`Requests: ${f.totalCount}`);
             lines.push(`Duplicates: ${f.duplicates.length ? f.duplicates.join(", ") : "None"}`);
             lines.push("");
