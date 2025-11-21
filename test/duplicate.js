@@ -123,10 +123,19 @@ async function run() {
     const rootDir = path.join(__dirname, "..", "reports");
     fs.mkdirSync(rootDir, { recursive: true });
     deleteOldFolders(rootDir);
+    
+    const now = new Date();
+    const timestamp =
+        "duplicate-" +
+        now.getFullYear() + "-" +
+        String(now.getMonth() + 1).padStart(2, "0") + "-" +
+        String(now.getDate()).padStart(2, "0") + "_" +
+        String(now.getHours()).padStart(2, "0") + "-" +
+        String(now.getMinutes()).padStart(2, "0") + "-" +
+        String(now.getSeconds()).padStart(2, "0");
 
-    const timestamp = `duplicate-${new Date().toISOString().replace(/[:T]/g, "-").split(".")[0]}`;
     const sessionDir = path.join(rootDir, timestamp);
-    fs.mkdirSync(sessionDir, { recursive: true });
+    fs.mkdirSync(sessionDir);
 
     let index = 1;
     for (const url of bannerUrls) {
