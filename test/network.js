@@ -7,6 +7,14 @@ const WAIT_TIME = 30000;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LOGIN_EMAIL = "access@adserve.no";
 
+function formatSize(bytes) {
+    if (bytes > 1024 * 1024)
+        return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+    if (bytes > 1024)
+        return (bytes / 1024).toFixed(2) + " KB";
+    return bytes + " B";
+}
+
 function deleteOldFolders(rootDir, prefix = "network-") {
     if (!fs.existsSync(rootDir)) return;
     for (const d of fs.readdirSync(rootDir)) {
@@ -46,30 +54,20 @@ async function analyzeUrl(url) {
 
     const domainData = {};
     const requests = [];
+
     console.log(`\n🚀 Testing banner: ${url}`);
 
-    page.on("requestfinished", req => {
-        requests.push(req);
-    });
-
-    await page.goto(url, { waitUntil: "domcontentloaded" }).catch(() => { });
-    await loginIfNeeded(page);
-
-    // await page.waitForLoadState("networkidle");
-    await page.waitForTimeout(WAIT_TIME);
-
-    // ดึง title 
-    let pageTitle = "N/A";
-    try {
-        const titleEl = await page.locator("h1.campaign-heading.text-center").first();
-        if (await titleEl.isVisible()) {
-            pageTitle = await titleEl.textContent();
-        }
-    } catch { }
-
-    for (const req of requests) {
+    page.on("requestfinished", async req => {
         try {
+            const res = await req.response();
+            if (!res) return;
+
+            const buffer = await res.body().catch(() => null);
+            if (!buffer) return;
+
+            const size = buffer.byteLength;
             const resUrl = req.url();
+
             const hostname = new URL(resUrl).hostname;
 
             if (!domainData[hostname]) domainData[hostname] = {};
@@ -79,52 +77,75 @@ async function analyzeUrl(url) {
             const type = req.resourceType();
 
             if (!domain[type]) domain[type] = {};
-            domain[type][fileName] = (domain[type][fileName] || 0) + 1;
+
+            if (!domain[type][fileName]) {
+                domain[type][fileName] = { count: 0, size: 0 };
+            }
+
+            domain[type][fileName].count += 1;
+            domain[type][fileName].size += size;
+
         } catch { }
-    }
+    });
+
+    await page.goto(url, { waitUntil: "domcontentloaded" }).catch(() => {});
+    await loginIfNeeded(page);
+
+    await page.waitForTimeout(WAIT_TIME);
+
+    let pageTitle = "N/A";
+    try {
+        const titleEl = await page.locator("h1.campaign-heading.text-center").first();
+        if (await titleEl.isVisible()) {
+            pageTitle = await titleEl.textContent();
+        }
+    } catch {}
 
     await browser.close();
 
     return { domainData, pageTitle };
 }
 
-// ⭐ รวมทุก request
 function countTotalRequests(domainData) {
     let total = 0;
     for (const types of Object.values(domainData)) {
         for (const files of Object.values(types)) {
-            for (const count of Object.values(files)) {
-                total += count;
+            for (const info of Object.values(files)) {
+                total += info.count;
             }
         }
     }
     return total;
 }
 
-// ⭐ รวม request เฉพาะโดเมนเดียว
 function countRequestsForDomain(types) {
     let total = 0;
     for (const files of Object.values(types)) {
-        for (const count of Object.values(files)) {
-            total += count;
+        for (const info of Object.values(files)) {
+            total += info.count;
         }
     }
     return total;
 }
 
-function summarizeImages(imgFiles) {
-    const summary = { png: 0, jpg: 0, webp: 0, other: 0 };
-
-    for (const [name, count] of Object.entries(imgFiles)) {
-        if (/\.png$/i.test(name)) summary.png += count;
-        else if (/\.jpe?g$/i.test(name)) summary.jpg += count;
-        else if (/\.webp$/i.test(name)) summary.webp += count;
-        else summary.other += count;
+function calculateDomainSize(types) {
+    let total = 0;
+    for (const files of Object.values(types)) {
+        for (const info of Object.values(files)) {
+            total += info.size;
+        }
     }
-    return summary;
+    return total;
 }
 
-// ⭐ ทำงานหลัก
+function calculateTotalSize(domainData) {
+    let total = 0;
+    for (const types of Object.values(domainData)) {
+        total += calculateDomainSize(types);
+    }
+    return total;
+}
+
 async function run() {
     const bannerUrls = process.argv.slice(2);
 
@@ -159,26 +180,27 @@ async function run() {
         const { domainData, pageTitle } = await analyzeUrl(url);
 
         const lines = [`URL: ${url}`, ""];
-
-        lines.push(`Campaign Title: ${pageTitle || "N/A"}`);
+        lines.push(`Campaign Title: ${pageTitle}`);
         lines.push(`Timestamp: ${timestamp}`);
-        lines.push(`Total requests (main page): ${countTotalRequests(domainData)}`);
-        lines.push(`Total domains: ${Object.keys(domainData).length}`);
+        lines.push(`Total requests: ${countTotalRequests(domainData)}`);
+        lines.push(`Total size: ${formatSize(calculateTotalSize(domainData))}`);
         lines.push("");
 
         for (const [domain, types] of Object.entries(domainData)) {
-            lines.push(`🎞️Domain: ${domain}`);
+            const domainSize = calculateDomainSize(types);
+
+            lines.push(`🎞️ Domain: ${domain}`);
             lines.push(`  Total requests: ${countRequestsForDomain(types)}`);
+            lines.push(`  Total size: ${formatSize(domainSize)}`);
 
             for (const [type, files] of Object.entries(types)) {
-                if (type === "image") {
-                    const imgSummary = summarizeImages(files);
-                    lines.push(`  Type: ${type} `);
-                    lines.push(`    🖼️Images: png(${imgSummary.png}), jpg(${imgSummary.jpg}), webp(${imgSummary.webp}), other(${imgSummary.other})`);
-                } else {
-                    lines.push(`  Type: ${type} - Requests: ${Object.entries(files).length}`);
+                lines.push(`  Type: ${type}`);
+
+                for (const [name, info] of Object.entries(files)) {
+                    lines.push(`    - ${name}: count = ${info.count}, size = ${formatSize(info.size)}`);
                 }
             }
+
             lines.push("");
         }
 
