@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import inquirer from "inquirer";
 import path from "path";
 import { pathToFileURL } from "url";
@@ -40,7 +39,6 @@ async function main() {
       .map((s) => s.trim())
       .filter(Boolean);
 
-    // ✅ ตรวจ URL existence
     const invalidUrls = await validateUrls(bannerUrls);
     if (invalidUrls.length) {
       console.error("\n❌ Some URLs do not exist:");
@@ -48,7 +46,7 @@ async function main() {
         console.error(`   ${i + 1}. ${u}`)
       );
       console.error("\n⛔ Test canceled. Please retry with valid URLs.");
-      return; // ไม่ทำต่อ ไม่รันเทส
+      return; 
     }
 
     console.log("\n✅ All input URLs are valid!");
