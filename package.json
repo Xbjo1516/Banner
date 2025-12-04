@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "inquirer": "^12.11.1",
     "playwright": "^1.56.1"
   },
   "type": "module"
