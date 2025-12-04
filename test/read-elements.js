@@ -92,7 +92,6 @@ async function analyzeMeta(url) {
         "twitter:image": await check("twitter:image", await getTwitterMeta(page, "twitter:image"))
     };
 
-
     // Favicon / Robots / Sitemap
     metaData.other = {
         favicon: await check("favicon", await getMeta(page, "link[rel='icon']", "href"))
@@ -118,11 +117,11 @@ async function analyzeMeta(url) {
     return metaData;
 }
 
-async function run() {
-    let bannerUrls = process.argv.slice(2);
-    if (!bannerUrls.length) {
-        console.log("❌ Please provide URL: node script.js <url1> <url2>");
-        process.exit(1);
+// ใช้กับ Inquirer: ส่ง bannerUrls เข้ามา ไม่อ่าน process.argv แล้ว
+export async function run(bannerUrls = []) {
+    if (!bannerUrls || !bannerUrls.length) {
+        console.log("❌ Please provide at least 1 URL");
+        return;
     }
 
     const rootDir = path.join(__dirname, "..", "reports");
@@ -197,5 +196,3 @@ async function run() {
         console.log(`📁 Saved report: ${path.join(linkDir, "report.txt")}`);
     }
 }
-
-run();

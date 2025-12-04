@@ -51,20 +51,23 @@ async function loginIfNeeded(page) {
     console.log("ℹ️  Skipping login, no login required");
 }
 
-(async () => {
+
+// @param {string[]} bannerUrls 
+
+export async function run(bannerUrls = []) {
     const browser = await firefox.launch({ headless: true });
     const page = await browser.newPage();
 
-    let bannerUrls = process.argv.slice(2);
     let categoryUsed = "Manual Input links";
 
-    if (bannerUrls.length === 0) {
-        categoryUsed = "FiveNights";
+    if (!bannerUrls || bannerUrls.length === 0) {
+        categoryUsed = "Flåklypa";
         bannerUrls = links[categoryUsed];
+
         if (!bannerUrls || bannerUrls.length === 0) {
             console.error(`❌ Category "${categoryUsed}" not found or empty`);
             await browser.close();
-            process.exit(1);
+            return;
         }
     }
 
@@ -193,4 +196,4 @@ async function loginIfNeeded(page) {
     }
 
     await browser.close();
-})();
+}
